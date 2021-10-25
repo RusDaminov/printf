@@ -33,3 +33,8 @@ void	ft_u(int *count, va_list ap)
 	u_d = va_arg(ap, unsigned int);
 	ft_putnbru_fd(u_d, 1, count);
 }
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}
