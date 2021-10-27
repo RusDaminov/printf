@@ -22,12 +22,12 @@ void	ft_0x(unsigned long long int n, int *count, char c)
 	if (n > 9 && n < 16)
 	{
 		if (c == 'X')
-			ft_putchar_fd((n % 10) + 65, 1);
+			ft_putchar_fd((n % 10) + 65);
 		else
-			ft_putchar_fd((n % 10) + 97, 1);
+			ft_putchar_fd((n % 10) + 97);
 	}
 	else
-		ft_putchar_fd(n + 48, 1);
+		ft_putchar_fd(n + 48);
 	(*count)++;
 }
 
