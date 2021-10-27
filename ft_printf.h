@@ -28,6 +28,6 @@ void	ft_x(int *count, va_list ap, char c);
 
 void	ft_0x(unsigned long long int n, int *count, char c);
 
-void	ft_putchar_fd(char c, int fd);
+void	ft_putchar_fd(char c);
 
 #endif

@@ -12,16 +12,16 @@
 
 #include "ft_printf.h"
 
-void	ft_putnbru_fd(unsigned int n, int fd, int *count)
+void	ft_putnbru_fd(unsigned int n, int *count)
 {
 	if (n >= 10)
 	{
-		ft_putnbru_fd(n / 10, 1, count);
+		ft_putnbru_fd(n / 10, count);
 		n %= 10;
 	}
 	if (n < 10)
 	{
-		ft_putchar_fd(n + 48, 1);
+		ft_putchar_fd(n + 48);
 		(*count)++;
 	}
 }
@@ -31,10 +31,10 @@ void	ft_u(int *count, va_list ap)
 	unsigned int	u_d;
 
 	u_d = va_arg(ap, unsigned int);
-	ft_putnbru_fd(u_d, 1, count);
+	ft_putnbru_fd(u_d, count);
 }
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c)
 {
-	write(fd, &c, 1);
+	write(1, &c, 1);
 }

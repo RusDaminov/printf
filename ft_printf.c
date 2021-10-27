@@ -91,8 +91,8 @@ void	ft_p(int *count, va_list ap)
 	unsigned long long int	p;
 
 	p = va_arg(ap, unsigned long long int);
-	ft_putchar_fd('0', 1);
-	ft_putchar_fd('x', 1);
+	ft_putchar_fd('0');
+	ft_putchar_fd('x');
 	*count += 2;
 	ft_0x(p, count, 'x');
 }
