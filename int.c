@@ -35,23 +35,23 @@ int	f_len(int n)
 	return (len);
 }
 
-void	ft_putnbri_fd(int n, int fd)
+void	ft_putnbri_fd(int n)
 {
 	if (n == -2147483648)
 	{
 		ft_putchar_fd('-', 1);
 		ft_putchar_fd('2', 1);
-		ft_putnbri_fd(147483648, 1);
+		ft_putnbri_fd(147483648);
 	}
 	else if (n < 0)
 	{
 		ft_putchar_fd('-', 1);
 		n *= -1;
-		ft_putnbri_fd(n, 1);
+		ft_putnbri_fd(n);
 	}
 	else if (n >= 10)
 	{
-		ft_putnbri_fd(n / 10, 1);
+		ft_putnbri_fd(n / 10);
 		n %= 10;
 		ft_putchar_fd(n + 48, 1);
 	}
@@ -64,6 +64,6 @@ void	ft_d(int *count, va_list ap)
 	int	dig;
 
 	dig = va_arg(ap, int);
-	ft_putnbri_fd(dig, 1);
+	ft_putnbri_fd(dig);
 	*count += f_len(dig);
 }
