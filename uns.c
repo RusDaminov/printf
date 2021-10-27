@@ -16,12 +16,12 @@ void	ft_putnbru_fd(unsigned int n, int fd, int *count)
 {
 	if (n >= 10)
 	{
-		ft_putnbru_fd(n / 10, fd, count);
+		ft_putnbru_fd(n / 10, 1, count);
 		n %= 10;
 	}
 	if (n < 10)
 	{
-		ft_putchar_fd(n + 48, fd);
+		ft_putchar_fd(n + 48, 1);
 		(*count)++;
 	}
 }
