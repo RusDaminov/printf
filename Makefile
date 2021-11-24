@@ -1,7 +1,7 @@
 NAME	=	libftprintf.a
 
-SRCS	=	ft_printf.c \
-			int.c \
+SRCS	=	ft_printf.c	\
+			int.c		\
 			uns.c	x.c
 
 
