@@ -39,8 +39,8 @@ void	ft_putnbri_fd(int n)
 {
 	if (n == -2147483648)
 	{
-		ft_putchar_fd('-', 1);
-		ft_putchar_fd('2', 1);
+		ft_putchar_fd('-');
+		ft_putchar_fd('2');
 		ft_putnbri_fd(147483648);
 	}
 	else if (n < 0)
@@ -53,10 +53,10 @@ void	ft_putnbri_fd(int n)
 	{
 		ft_putnbri_fd(n / 10);
 		n %= 10;
-		ft_putchar_fd(n + 48, 1);
+		ft_putchar_fd(n + 48);
 	}
 	else if (n < 10)
-		ft_putchar_fd(n + 48, 1);
+		ft_putchar_fd(n + 48);
 }
 
 void	ft_d(int *count, va_list ap)
